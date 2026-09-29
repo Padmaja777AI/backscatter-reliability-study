@@ -1,0 +1,22 @@
+config_id,position,implied_packets_dr_times_duration_over_12B,caveat
+100k,P1,205.1,baseline: product of two separately averaged trial means; approximate only
+100k,P2,201.0,baseline: product of two separately averaged trial means; approximate only
+100k,P4,203.5,baseline: product of two separately averaged trial means; approximate only
+100k,P5,200.3,baseline: product of two separately averaged trial means; approximate only
+80k,P1,200.0,approximate consistency check from rounded published values
+80k,P2,200.0,approximate consistency check from rounded published values
+80k,P4,200.0,approximate consistency check from rounded published values
+80k,P5,200.0,approximate consistency check from rounded published values
+70k,P1,200.8,approximate consistency check from rounded published values
+70k,P2,200.0,approximate consistency check from rounded published values
+70k,P3,199.9,approximate consistency check from rounded published values
+70k,P4,199.9,approximate consistency check from rounded published values
+70k,P5,199.9,approximate consistency check from rounded published values
+60k,P1,199.9,approximate consistency check from rounded published values
+60k,P2,199.9,approximate consistency check from rounded published values
+60k,P4,198.9,approximate consistency check from rounded published values
+60k,P5,200.0,approximate consistency check from rounded published values
+50k,P1,199.9,approximate consistency check from rounded published values
+50k,P2,199.9,approximate consistency check from rounded published values
+50k,P4,199.9,approximate consistency check from rounded published values
+50k,P5,198.3,approximate consistency check from rounded published values

@@ -1,0 +1,6 @@
+config_id,avg_ber_sentinel_inclusive_pct_recomputed,avg_ber_reported_pct_table2,avg_ber_difference,avg_data_rate_bytes_per_s_recomputed,avg_data_rate_reported_table2,avg_data_rate_difference,avg_duration_s_recomputed,n_positions_in_duration_average,avg_duration_reported_table2,avg_duration_difference
+100k,31.506,31.51,-0.004,20.33,20.33,0.0,97.037,4,97.04,-0.003
+80k,25.882,25.88,0.002,26.984,26.98,0.004,71.412,4,71.41,0.002
+70k,14.064,14.06,0.004,27.058,27.06,-0.002,105.294,5,105.3,-0.006
+60k,26.286,26.29,-0.004,25.97,25.97,0.0,74.847,4,74.85,-0.002
+50k,31.808,31.81,-0.002,15.854,15.85,0.004,126.888,4,126.89,-0.002

@@ -1,0 +1,6 @@
+config_id,reception,ber_pct,data_rate_bytes_per_s,duration_s,outcome
+100k,none,,0.0,,"no packets received within the 5-minute cap (report marker: BER = 100 %, D/R = 0)"
+80k,none,,0.0,,"no packets received within the 5-minute cap (report marker: BER = 100 %, D/R = 0)"
+70k,received,29.96,11.73,204.53,packets received
+60k,none,,0.0,,"no packets received within the 5-minute cap (report marker: BER = 100 %, D/R = 0)"
+50k,none,,0.0,,"no packets received within the 5-minute cap (report marker: BER = 100 %, D/R = 0)"

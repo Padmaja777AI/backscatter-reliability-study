@@ -1,0 +1,6 @@
+position,carrier_to_tag_cm,tag_to_receiver_cm,description,source_report,source_page
+P1,27,273,edge position nearest the carrier generator,Group6_Experimental_Optimisation_1_Baud_Rate.pdf;Group6_Experimental_Optimisation_2_250kBaud_Longer_Packets.pdf,2
+P2,50,250,carrier-side position,Group6_Experimental_Optimisation_1_Baud_Rate.pdf;Group6_Experimental_Optimisation_2_250kBaud_Longer_Packets.pdf,2
+P3,150,150,midpoint; both links at maximum path loss (worst case),Group6_Experimental_Optimisation_1_Baud_Rate.pdf;Group6_Experimental_Optimisation_2_250kBaud_Longer_Packets.pdf,2
+P4,250,50,receiver-side position,Group6_Experimental_Optimisation_1_Baud_Rate.pdf;Group6_Experimental_Optimisation_2_250kBaud_Longer_Packets.pdf,2
+P5,277,23,edge position nearest the receiver,Group6_Experimental_Optimisation_1_Baud_Rate.pdf;Group6_Experimental_Optimisation_2_250kBaud_Longer_Packets.pdf,2

@@ -1,0 +1,26 @@
+source_report,source_page,source_table,config_id,baud_kbaud,config_role,trials,position,reception,ber_reported_pct,ber_pct,data_rate_reported_bytes_per_s,duration_reported_s,note
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,100k,100,baseline,3,P1,received,10.66,10.66,29.16,84.42,baseline values are averages over three trials
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,100k,100,baseline,3,P2,received,13.03,13.03,26.95,89.52,baseline values are averages over three trials
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,100k,100,baseline,3,P3,none,100.00,,0.00,,no packets received within 5 minutes; report records BER = 100 % and D/R = 0 as a failure marker; duration printed as a dash
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,100k,100,baseline,3,P4,received,18.51,18.51,20.99,116.32,baseline values are averages over three trials
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,100k,100,baseline,3,P5,received,15.33,15.33,24.55,97.89,baseline values are averages over three trials
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,80k,80,optimised,1,P1,received,4.30,4.30,37.03,64.81,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,80k,80,optimised,1,P2,received,10.00,10.00,31.71,75.68,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,80k,80,optimised,1,P3,none,100.00,,0.00,,no packets received within 5 minutes; failure marker as above
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,80k,80,optimised,1,P4,received,8.16,8.16,34.03,70.52,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,80k,80,optimised,1,P5,received,6.95,6.95,32.15,74.64,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,70k,70,optimised,1,P1,received,3.72,3.72,39.72,60.66,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,70k,70,optimised,1,P2,received,9.70,9.70,30.87,77.75,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,70k,70,optimised,1,P3,received,29.96,29.96,11.73,204.53,only configuration with reception at the midpoint
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,70k,70,optimised,1,P4,received,15.00,15.00,23.49,102.14,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,70k,70,optimised,1,P5,received,11.94,11.94,29.48,81.39,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,60k,60,optimised,1,P1,received,3.57,3.57,37.03,64.79,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,60k,60,optimised,1,P2,received,8.64,8.64,33.66,71.28,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,60k,60,optimised,1,P3,none,100.00,,0.00,,no packets received within 5 minutes; failure marker as above
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,60k,60,optimised,1,P4,received,10.97,10.97,26.68,89.44,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,60k,60,optimised,1,P5,received,8.25,8.25,32.48,73.88,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,50k,50,optimised,1,P1,received,11.50,11.50,25.64,93.58,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,50k,50,optimised,1,P2,received,14.40,14.40,17.17,139.72,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,50k,50,optimised,1,P3,none,100.00,,0.00,,no packets received within 5 minutes; failure marker as above
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,50k,50,optimised,1,P4,received,18.45,18.45,14.44,166.16,
+Group6_Experimental_Optimisation_1_Baud_Rate.pdf,4,Table 1,50k,50,optimised,1,P5,received,14.69,14.69,22.02,108.09,
