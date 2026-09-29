@@ -1,0 +1,3 @@
+# analysis/summarize.py needs only the Python standard library (3.10+).
+matplotlib>=3.8      # analysis/plot.py
+pymupdf>=1.24        # analysis/verify_transcription.py (optional check against the PDFs)

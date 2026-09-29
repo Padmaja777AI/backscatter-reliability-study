@@ -1,0 +1,91 @@
+# Listing of the university archive as provided (wcnes-project2026-main.zip)
+# SHA-256 of the archive: e23d54c1960fa11542832e15faa03613894e0b6df05697b297126c33224fd3b8
+# Archive comment (upstream git commit id): 8e1cc2b776cb677452c4f3d800d088d6a204a8af
+# Generated with: unzip -l
+Archive:  /root/.claude/uploads/faf5210a-46ba-5c4b-9f90-ab23c4c557f7/b414d15e-wcnes-project2026-main.zip
+8e1cc2b776cb677452c4f3d800d088d6a204a8af
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+        0  2026-03-23 12:37   wcnes-project2026-main/
+     1512  2026-03-23 12:37   wcnes-project2026-main/LICENSE.txt
+     3546  2026-03-23 12:37   wcnes-project2026-main/README.md
+        0  2026-03-23 12:37   wcnes-project2026-main/baseband/
+     1747  2026-03-23 12:37   wcnes-project2026-main/baseband/CMakeLists.txt
+     4618  2026-03-23 12:37   wcnes-project2026-main/baseband/README.md
+     5054  2026-03-23 12:37   wcnes-project2026-main/baseband/backscatter.pio
+    10639  2026-03-23 12:37   wcnes-project2026-main/baseband/generate-backscatter-pio.py
+     1889  2026-03-23 12:37   wcnes-project2026-main/baseband/main.c
+     3165  2026-03-23 12:37   wcnes-project2026-main/baseband/pico_sdk_import.cmake
+        0  2026-03-23 12:37   wcnes-project2026-main/carrier-CC2500/
+     1447  2026-03-23 12:37   wcnes-project2026-main/carrier-CC2500/CMakeLists.txt
+     2295  2026-03-23 12:37   wcnes-project2026-main/carrier-CC2500/README.md
+     1434  2026-03-23 12:37   wcnes-project2026-main/carrier-CC2500/main.c
+     3165  2026-03-23 12:37   wcnes-project2026-main/carrier-CC2500/pico_sdk_import.cmake
+        0  2026-03-23 12:37   wcnes-project2026-main/carrier-Firefly/
+     1772  2026-03-23 12:37   wcnes-project2026-main/carrier-Firefly/README.md
+        0  2026-03-23 12:37   wcnes-project2026-main/carrier-characteristics/
+      852  2026-03-23 12:37   wcnes-project2026-main/carrier-characteristics/README.md
+    89013  2026-03-23 12:37   wcnes-project2026-main/carrier-characteristics/center-measurement.png
+    89572  2026-03-23 12:37   wcnes-project2026-main/carrier-characteristics/edge-measurement.png
+        0  2026-03-23 12:37   wcnes-project2026-main/carrier-nrf52840/
+      675  2026-03-23 12:37   wcnes-project2026-main/carrier-nrf52840/README.md
+        0  2026-03-23 12:37   wcnes-project2026-main/carrier-receiver-CC1352/
+     1591  2026-03-23 12:37   wcnes-project2026-main/carrier-receiver-CC1352/README.md
+   119033  2026-03-23 12:37   wcnes-project2026-main/carrier-receiver-CC1352/SmartRF_1352.png
+        0  2026-03-23 12:37   wcnes-project2026-main/carrier-receiver-baseband/
+     1966  2026-03-23 12:37   wcnes-project2026-main/carrier-receiver-baseband/CMakeLists.txt
+     2839  2026-03-23 12:37   wcnes-project2026-main/carrier-receiver-baseband/README.md
+      250  2026-03-23 12:37   wcnes-project2026-main/carrier-receiver-baseband/flash.sh
+     5601  2026-03-23 12:37   wcnes-project2026-main/carrier-receiver-baseband/main.c
+     3165  2026-03-23 12:37   wcnes-project2026-main/carrier-receiver-baseband/pico_sdk_import.cmake
+     1342  2026-03-23 12:37   wcnes-project2026-main/carrier-receiver-baseband/serial-print.py
+        0  2026-03-23 12:37   wcnes-project2026-main/hardware/
+    34816  2026-03-23 12:37   wcnes-project2026-main/hardware/Bill-Of-Materials.xls
+     4880  2026-03-23 12:37   wcnes-project2026-main/hardware/README.md
+   147971  2026-03-23 12:37   wcnes-project2026-main/hardware/backscatter-tag-Gerber.zip
+   692352  2026-03-23 12:37   wcnes-project2026-main/hardware/backscatter-tag.kicad_pcb
+     1161  2026-03-23 12:37   wcnes-project2026-main/hardware/backscatter-tag.kicad_prl
+     9422  2026-03-23 12:37   wcnes-project2026-main/hardware/backscatter-tag.kicad_pro
+   143003  2026-03-23 12:37   wcnes-project2026-main/hardware/backscatter-tag.kicad_sch
+        0  2026-03-23 12:37   wcnes-project2026-main/hardware/footprints/
+        0  2026-03-23 12:37   wcnes-project2026-main/hardware/footprints/backscatter.pretty/
+     2815  2026-03-23 12:37   wcnes-project2026-main/hardware/footprints/backscatter.pretty/MSOP8.kicad_mod
+     1370  2026-03-23 12:37   wcnes-project2026-main/hardware/footprints/backscatter.pretty/SMA PCB THT Jack Straight WR-SMA.kicad_mod
+     1808  2026-03-23 12:37   wcnes-project2026-main/hardware/footprints/backscatter.pretty/SMA-60312002114503.kicad_mod
+     1809  2026-03-23 12:37   wcnes-project2026-main/hardware/footprints/backscatter.pretty/SMA-CONREVSMA001-G.kicad_mod
+     1355  2026-03-23 12:37   wcnes-project2026-main/hardware/footprints/backscatter.pretty/SOD-123FL-2.kicad_mod
+     1918  2026-03-23 12:37   wcnes-project2026-main/hardware/footprints/backscatter.pretty/SOP8.kicad_mod
+     1399  2026-03-23 12:37   wcnes-project2026-main/hardware/footprints/backscatter.pretty/SSOP5.kicad_mod
+      617  2026-03-23 12:37   wcnes-project2026-main/hardware/footprints/backscatter.pretty/mounting-whole.kicad_mod
+  3158570  2026-03-23 12:37   wcnes-project2026-main/hardware/fp-info-cache
+      130  2026-03-23 12:37   wcnes-project2026-main/hardware/fp-lib-table
+      143  2026-03-23 12:37   wcnes-project2026-main/hardware/sym-lib-table
+        0  2026-03-23 12:37   wcnes-project2026-main/hardware/symbols/
+       71  2026-03-23 12:37   wcnes-project2026-main/hardware/symbols/backscatter-parts.bak
+     3763  2026-03-23 12:37   wcnes-project2026-main/hardware/symbols/backscatter-parts.kicad_sym
+        0  2026-03-23 12:37   wcnes-project2026-main/project_pico_libs/
+     9936  2026-03-23 12:37   wcnes-project2026-main/project_pico_libs/backscatter.c
+     1869  2026-03-23 12:37   wcnes-project2026-main/project_pico_libs/backscatter.h
+     6763  2026-03-23 12:37   wcnes-project2026-main/project_pico_libs/carrier_CC2500.c
+     1649  2026-03-23 12:37   wcnes-project2026-main/project_pico_libs/carrier_CC2500.h
+     3385  2026-03-23 12:37   wcnes-project2026-main/project_pico_libs/packet_generation.c
+     1567  2026-03-23 12:37   wcnes-project2026-main/project_pico_libs/packet_generation.h
+    12922  2026-03-23 12:37   wcnes-project2026-main/project_pico_libs/receiver_CC2500.c
+     3307  2026-03-23 12:37   wcnes-project2026-main/project_pico_libs/receiver_CC2500.h
+        0  2026-03-23 12:37   wcnes-project2026-main/receiver-CC2500/
+     1453  2026-03-23 12:37   wcnes-project2026-main/receiver-CC2500/CMakeLists.txt
+     3235  2026-03-23 12:37   wcnes-project2026-main/receiver-CC2500/README.md
+     2996  2026-03-23 12:37   wcnes-project2026-main/receiver-CC2500/main.c
+     3165  2026-03-23 12:37   wcnes-project2026-main/receiver-CC2500/pico_sdk_import.cmake
+      678  2026-03-23 12:37   wcnes-project2026-main/requirements.txt
+        0  2026-03-23 12:37   wcnes-project2026-main/stats/
+      635  2026-03-23 12:37   wcnes-project2026-main/stats/README.md
+    16400  2026-03-23 12:37   wcnes-project2026-main/stats/baseline_3m_c25.csv
+    16400  2026-03-23 12:37   wcnes-project2026-main/stats/baseline_3m_c50.csv
+    16400  2026-03-23 12:37   wcnes-project2026-main/stats/baseline_3m_rx25.csv
+    16400  2026-03-23 12:37   wcnes-project2026-main/stats/baseline_3m_rx50.csv
+     6200  2026-03-23 12:37   wcnes-project2026-main/stats/functions.py
+    78885  2026-03-23 12:37   wcnes-project2026-main/stats/log.txt
+   180337  2026-03-23 12:37   wcnes-project2026-main/stats/statistics.ipynb
+---------                     -------
+  4952137                     81 files

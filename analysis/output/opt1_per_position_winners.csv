@@ -1,0 +1,6 @@
+position,n_configs_with_reception,lowest_ber_config,lowest_ber_pct,second_lowest_ber_config,second_lowest_ber_pct,highest_data_rate_config,highest_data_rate_bytes_per_s,shortest_duration_config,shortest_duration_s
+P1,5,60k,3.57,70k,3.72,70k,39.72,70k,60.66
+P2,5,60k,8.64,70k,9.7,60k,33.66,60k,71.28
+P3,1,70k,29.96,,,70k,11.73,70k,204.53
+P4,5,80k,8.16,60k,10.97,80k,34.03,80k,70.52
+P5,5,80k,6.95,60k,8.25,60k,32.48,60k,73.88

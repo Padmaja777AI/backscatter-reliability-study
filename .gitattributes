@@ -1,0 +1,8 @@
+# The university platform is vendored byte-for-byte; some of its files carry CRLF
+# line endings. Never normalise them.
+platform/** -text
+
+# Binary assets
+docs/reports/*.pdf binary
+*.png binary
+*.jpg binary

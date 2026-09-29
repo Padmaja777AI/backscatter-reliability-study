@@ -1,0 +1,6 @@
+position,baseline_reception,baseline_ber_pct,baseline_data_rate_bytes_per_s,baseline_prr_pct,opt2_reception,opt2_ber_pct,opt2_data_rate_bytes_per_s,opt2_prr_pct,ber_change_pct_points,ber_ratio_opt2_over_baseline,data_rate_change_bytes_per_s,prr_change_pct_points,diagnostic_baseline_prr_pct_x_12B_over_dr_s,diagnostic_opt2_prr_pct_x_12B_over_dr_s,note
+P1,received,10.66,29.16,64.3,received,33.4,27.87,46.5,22.74,3.13,-1.29,-17.8,0.265,0.2,packet length stated in the Method section as increased from 11 bytes to 16 bytes; which payload length entered the D/R formula for this configuration is not stated
+P2,received,13.03,26.95,58.8,received,37.7,0.93,2.0,24.67,2.89,-26.02,-56.8,0.262,0.258,D/R printed as .93 in the report
+P3,none,,0.0,,none,,0.0,,,,,,,,no packets received; failure marker; PRR printed as a dash
+P4,received,18.51,20.99,45.0,received,34.5,11.2,1.0,15.99,1.86,-9.79,-44.0,0.257,0.011,D/R of 11.2 bytes/s and PRR of 1 % are not mutually consistent under the report's own definitions; both preserved as printed
+P5,received,15.33,24.55,52.5,none,,0.0,,,,,,0.257,,no packets received; failure marker; PRR printed as a dash; the failure rule in the Setup section is defined for P3 only

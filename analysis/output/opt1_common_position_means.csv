@@ -1,0 +1,6 @@
+config_id,baud_kbaud,positions,n_positions,trials_per_position,mean_ber_pct,min_ber_pct,max_ber_pct,mean_data_rate_bytes_per_s,mean_duration_s
+100k,100,P1;P2;P4;P5,4,3,14.383,10.66,18.51,25.413,97.037
+80k,80,P1;P2;P4;P5,4,1,7.353,4.3,10.0,33.73,71.412
+70k,70,P1;P2;P4;P5,4,1,10.09,3.72,15.0,30.89,80.485
+60k,60,P1;P2;P4;P5,4,1,7.857,3.57,10.97,32.462,74.847
+50k,50,P1;P2;P4;P5,4,1,14.76,11.5,18.45,19.817,126.888
