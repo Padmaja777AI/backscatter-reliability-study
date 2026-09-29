@@ -19,10 +19,10 @@ error control add on top?
 * **Measured:** lowering the baud rate from 100 kBaud to 60–80 kBaud reduced the bit
   error rate at every position where packets were received, for example from 10.66 % to
   4.30 % (80 kBaud) at the position nearest the carrier.
-* **Computed from the published table:** 80 kBaud has the best unweighted mean over the
-  four positions every configuration reached (BER 7.35 %, 33.73 received bytes/s,
-  71.41 s per run), with 60 kBaud close behind; the best setting differs from position
-  to position.
+* **Computed from the published table:** over the four positions with reception in every
+  compared configuration (P1, P2, P4, P5), 80 kBaud has the best unweighted means
+  (BER 7.35 %, 33.73 received bytes/s, 71.41 s per run), with 60 kBaud close behind; the
+  best setting differs from position to position.
 * **Measured:** 70 kBaud was the only configuration that received anything at the
   worst-case midpoint (BER 29.96 %, 11.73 bytes/s, 204.53 s), a genuine coverage result
   on a marginal link.
@@ -56,9 +56,11 @@ flowchart LR
 
 * **Tag:** the RP2040's PIO state machine toggles a reflective RF switch between open and
   short with cycle-exact timing, shifting the reflected carrier by two selectable
-  frequencies (2-FSK). Frames are 24 bytes: preamble, sync word, length, sequence number
-  and a 14-byte payload whose pseudo-random samples the analysis can regenerate to count
-  bit errors.
+  frequencies (2-FSK). In the platform's starter code a frame is 24 bytes: preamble, sync
+  word, length, sequence number and a 14-byte payload whose pseudo-random samples the
+  analysis can regenerate to count bit errors. Those are starter defaults; Group 6 changed
+  the baud rate, and in the second experiment the packet length, and the modified layout
+  is not documented.
 * **Carrier and receiver:** in the laboratory an nRF52840 board generated the carrier and
   a CC1352 LaunchPad received the backscattered packets through SmartRF Studio; the
   platform also supports CC2500 modules on the Pico for both roles.
@@ -79,7 +81,7 @@ from Table 1 of the Optimisation 1 report; not an original report figure.*
 
 ![Unweighted means over the four common positions](docs/figures/generated/opt1_common_position_means.png)
 
-*Unweighted means over the four positions where every configuration received packets
+*Unweighted means over the four positions with reception in every compared configuration
 (P1, P2, P4, P5). Grey point = 100 kBaud baseline. Newly generated from the same table.*
 
 | Baud rate | Trials per position | Mean BER, common positions (%) | Mean data rate (bytes/s) | Mean run duration (s) | Midpoint P3 |
@@ -90,16 +92,19 @@ from Table 1 of the Optimisation 1 report; not an original report figure.*
 | 60 kBaud | 1 | 7.86 | 32.46 | 74.85 | no reception |
 | 50 kBaud | 1 | 14.76 | 19.82 | 126.89 | no reception |
 
-*Means are unweighted over P1, P2, P4 and P5, computed by `analysis/summarize.py` from the
-report's Table 1. "No reception" means no packets within the 5-minute cap; the report
-records it as "BER = 100 %, D/R = 0", a failure marker that is not averaged here.*
+*Means are unweighted over P1, P2, P4 and P5, the four positions with reception in every
+compared configuration, computed by `analysis/summarize.py` from the report's Table 1.
+"No reception" means no packets within the 5-minute cap; the report records it as
+"BER = 100 %, D/R = 0", a failure marker that is not averaged here.*
 
 **Optimisation 2 (250 kBaud, longer packets).** BER over received packets rose to
 33.4 %, 37.7 % and 34.5 % at P1, P2 and P4 (baseline 10.66 %, 13.03 %, 18.51 %); P3 and
 P5 received nothing; the data rate was 27.87 bytes/s at P1 (baseline 29.16) but
 0.93 and 11.2 bytes/s at P2 and P4; the reported packet reception rates at P2 and P4 were
 2 % and 1 %. The group reports this as a negative result under the laboratory's
-interference conditions. Figure and table:
+interference conditions. The modified packet layout and the payload length that entered
+the 250 kBaud data-rate calculation are not documented, so those data rates cannot be
+cross-checked. Figure and table:
 [docs/results.md](docs/results.md#25-optimisation-2-against-the-baseline).
 
 ## Analytical optimisation: FEC with interleaving (proposal)
@@ -125,13 +130,15 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r analysis/requirements.txt
 python3 analysis/summarize.py             # analysis/output/*.csv, summary.md, transcribed_tables.md
 python3 analysis/plot.py                  # docs/figures/generated/*.png
-python3 analysis/verify_transcription.py  # every CSV value checked against its cited PDF page
+python3 analysis/verify_transcription.py --self-test  # CSV cells vs the parsed PDF tables, plus a mutation self-test
 sha256sum -c data/provenance/checksums.sha256
 ```
 
-Rebuilding the platform firmware follows the platform's own READMEs under
-`platform/wcnes-project2026/`; that was not done for this repository. See
-[docs/reproduction.md](docs/reproduction.md).
+The transcription check parses each cited table from the PDF text layer and compares
+every CSV cell by configuration, position and metric; it establishes that the CSVs match
+the printed tables, not that the reports' values are correct. Rebuilding the platform
+firmware follows the platform's own READMEs under `platform/wcnes-project2026/`; that was
+not done for this repository. See [docs/reproduction.md](docs/reproduction.md).
 
 ## Repository layout
 
@@ -178,8 +185,9 @@ platform/wcnes-project2026/        the university platform, byte-for-byte, with 
   by Uppsala University or the platform authors.
 * Tooling: the repository documentation, CSV transcriptions and analysis scripts were
   prepared with the assistance of Claude Code (Anthropic) and reviewed by the owner. The
-  laboratory work, measurements, reports and analytical proposal are the work of the
-  people credited above.
+  laboratory work, measurements and reports are the work of the people credited above;
+  the reports keep their own statements, including the analytical report's disclosure of
+  AI assistance with language and structuring. Details in [NOTICE.md](NOTICE.md).
 
 ## Licence
 

@@ -9,14 +9,14 @@ this repository (see [docs/provenance.md](../docs/provenance.md)).
 |---|---|---|---|
 | `summarize.py` | `data/reported/*.csv` | `analysis/output/*.csv`, `analysis/output/summary.md`, `analysis/output/transcribed_tables.md` | Re-applies the reports' own averaging method, computes unweighted means over the four common positions, ranks configurations per position, lists midpoint outcomes, runs an approximate packet-count consistency check, and compares Optimisation 2 with the baseline. |
 | `plot.py` | `data/reported/*.csv`, `analysis/output/opt1_common_position_means.csv` | `docs/figures/generated/*.png` | Draws the four figures used in the documentation. Positions without reception are drawn as "no reception" markers, never as 100 % bars. |
-| `verify_transcription.py` | `data/reported/*.csv`, `docs/reports/*.pdf` | console report, exit status | Checks that every transcribed value occurs on the cited page of the cited PDF. |
+| `verify_transcription.py` | `data/reported/*.csv`, `docs/reports/*.pdf` | console report, exit status | Parses each cited table from the PDF text layer (rows by configuration label and position token, columns in printed order) and compares every CSV cell by configuration, position and metric; also checks expected rows, duplicates, blanks, reception flags, normalised BER and source references. A weak page-token check is kept as a supplementary guard. `--self-test` swaps values and flips flags in memory and confirms the cell check fails. Establishes that the CSVs match the printed tables, not that the reports are correct. |
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r analysis/requirements.txt
 python3 analysis/summarize.py
 python3 analysis/plot.py
-python3 analysis/verify_transcription.py
+python3 analysis/verify_transcription.py --self-test
 ```
 
 Conventions the scripts rely on:

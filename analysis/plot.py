@@ -176,7 +176,7 @@ def fig_opt1_common_means():
         ax.set_ylim(0, max(y) * 1.25)
         style_axis(ax)
     fig.suptitle("Optimisation 1: unweighted means over the four common positions P1, P2, P4, P5\n"
-                 "(the positions where every configuration received packets)", x=0.01, ha="left", fontsize=12)
+                 "(the positions with reception in every compared configuration)", x=0.01, ha="left", fontsize=12)
     fig.text(0.01, 0.01, FOOT + " Grey point = 100 kBaud baseline.", fontsize=7.5, color=MUTED, ha="left", va="bottom")
     fig.tight_layout(rect=(0, 0.05, 1, 0.90))
     fig.savefig(OUT / "opt1_common_position_means.png", dpi=160)

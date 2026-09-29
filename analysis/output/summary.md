@@ -37,8 +37,8 @@ throughput outcome, so the D/R average does reflect coverage.
 
 ## 2. Unweighted means over the four common positions (P1, P2, P4, P5)
 
-These are the positions where **every** configuration received packets, so no failure
-marker enters the average. Unweighted arithmetic means across the four positions:
+These are the four positions with reception in **every compared configuration**, so no
+failure marker enters the average. Unweighted arithmetic means across the four positions:
 
 | Config | Trials / position | Mean BER % (P1,P2,P4,P5) | BER range % | Mean D/R bytes/s | Mean duration s |
 |---|---|---|---|---|---|

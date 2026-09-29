@@ -53,11 +53,14 @@ The platform provides two ways to build the state machine:
   `d0 d1 baud` at build time. The checked-in `baseband/backscatter.pio` was generated
   with `28 24 100000 --twoAntennas`: shifts of 4.464 MHz and 5.208 MHz, centre offset
   4.836 MHz, deviation 372 kHz, about 844 kHz occupied bandwidth.
-* `project_pico_libs/backscatter.c` assembles the same program at run time
-  (`backscatter_program_init`), so baud rate and dividers can be changed without
-  recompiling. The integrated example `carrier-receiver-baseband/main.c` uses
-  `CLOCK_DIV0 = 20`, `CLOCK_DIV1 = 18`, `DESIRED_BAUD = 100000`, two antennas: shifts
-  of 6.25 MHz and 6.94 MHz, centre offset about 6.60 MHz, deviation about 347 kHz.
+* `project_pico_libs/backscatter.c` assembles the same program **at run time**
+  (`backscatter_program_init`) from the dividers and baud rate it is given, so no
+  `pioasm` step is needed and a program could vary those parameters while running. The
+  checked-in integrated example `carrier-receiver-baseband/main.c` does not do that: it
+  passes **compile-time constants** (`CLOCK_DIV0 = 20`, `CLOCK_DIV1 = 18`,
+  `DESIRED_BAUD = 100000`, `TWOANTENNAS = true`; shifts of 6.25 MHz and 6.94 MHz, centre
+  offset about 6.60 MHz, deviation about 347 kHz), so changing the baud rate in that
+  example still means editing the constants, rebuilding and re-flashing.
 
 Baud rates that do not divide 125 MHz are snapped to the nearest achievable value
 (for 80, 70 and 60 kBaud the snapped values differ from the nominal ones by less than
@@ -65,9 +68,10 @@ Baud rates that do not divide 125 MHz are snapped to the nearest achievable valu
 (380 kHz) or CC1352 (1 MHz) can be configured for. The reports do not state which
 dividers Group 6 used.
 
-## 3. Frame format
+## 3. Frame format (starter-code defaults)
 
-Defined in `project_pico_libs/packet_generation.[ch]`:
+Defined in `project_pico_libs/packet_generation.[ch]` as shipped. These are the
+platform's defaults, not a record of what Group 6 transmitted:
 
 | Field | Bytes | Content |
 |---|---|---|
@@ -77,7 +81,10 @@ Defined in `project_pico_libs/packet_generation.[ch]`:
 | Sequence number | 1 | increments per packet, wraps at 256 |
 | Payload | 14 | 2-byte pseudo-sequence (byte index into a virtual file) + six 16-bit pseudo-random "compressible" samples = 12 data bytes |
 
-Total: 24 bytes, packed into six 32-bit words for the PIO FIFO. The samples come from a
+Total: 24 bytes with the default `PAYLOADSIZE = 14`, packed into six 32-bit words for the
+PIO FIFO. Optimisation 2 states that the packet length was increased; the modified layout
+and the payload length that entered its data-rate calculation are not documented (see
+[experiments.md](experiments.md)). The samples come from a
 linear congruential generator seeded with `0xABCD` and shaped into a Gaussian-like
 16-bit distribution, so the analysis script can regenerate the expected payload for
 any pseudo-sequence value and count bit errors without a side channel. The receiver

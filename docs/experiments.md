@@ -78,8 +78,9 @@ of low interference, and might match or beat the baseline in such an environment
 (three averaged trials) were used. The Setup section repeats the 5-minute midpoint cap;
 the Results section says failures were recorded after **15 minutes** "at that location".
 The report does not say which payload length entered the D/R formula for the 250 kBaud
-rows, and "11 bytes" does not correspond to any packet-size constant in the platform
-firmware (default payload 14 bytes = 2 + 12, length field 15, frame 24 bytes).
+rows, so the modified packet layout is unavailable, and "11 bytes" does not correspond to
+any packet-size constant in the platform's starter code (default payload 14 bytes =
+2 + 12, length field 15, frame 24 bytes).
 
 **Results (pages 4–6).** Table 1 lists BER, D/R and PRR for the baseline and the
 250 kBaud configuration (no duration column). Figures 4–6 plot BER, D/R and PRR for the

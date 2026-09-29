@@ -14,13 +14,32 @@ pip install -r analysis/requirements.txt
 
 python3 analysis/summarize.py             # writes analysis/output/*.csv, summary.md, transcribed_tables.md
 python3 analysis/plot.py                  # writes docs/figures/generated/*.png
-python3 analysis/verify_transcription.py  # checks every CSV value against the cited PDF page (needs pymupdf)
+python3 analysis/verify_transcription.py --self-test   # CSV cells vs the parsed PDF tables (needs pymupdf)
 sha256sum -c data/provenance/checksums.sha256   # confirms the PDFs and platform files are unchanged
 ```
 
 Expected results: `summarize.py` reproduces the reports' Table 2 to two decimals
-(70 kBaud duration 105.29 vs 105.30 s, see the errata); `verify_transcription.py`
-reports every checked value as found; `sha256sum -c` reports every file as OK.
+(70 kBaud duration 105.29 vs 105.30 s, see the errata); `verify_transcription.py` prints
+`RESULT: PASS`; `sha256sum -c` reports every file as OK.
+
+What `verify_transcription.py` establishes. It parses each cited table from the PDF's
+text layer (one printed row per text line; the configuration from the label printed in
+the first column of the row group; the position from the P1–P5 token; the metric columns
+in printed order) and compares every CSV cell by configuration, position and metric. It
+also requires the exact expected set of rows, no duplicates, blanks only where the report
+prints a dash, reception flags that match the report's failure marker, a normalised BER
+equal to the printed BER on received rows, and correct report/page/table references.
+`--self-test` swaps two different values on the same page, flips a reception flag,
+alters a normalised BER, cites a wrong page, duplicates and drops rows, and confirms the
+cell check fails on each. A supplementary page-token check is kept but is weak: it does
+not notice a value in the wrong row or column, which the self-test also shows. Passing
+means the CSVs match the tables as printed; it says nothing about whether the reports'
+own values are correct.
+
+Recorded environment in which the committed outputs were generated and found repeatable
+(two consecutive runs produced byte-identical CSVs, markdown and PNGs): Python 3.11.15,
+matplotlib 3.11.2, PyMuPDF 1.28.2, Linux x86_64 (glibc 2.39). Other matplotlib versions
+may render the PNGs with small pixel differences.
 
 This workflow only re-derives numbers from the tables. It does not touch hardware and it
 cannot produce anything the reports do not contain.

@@ -57,9 +57,20 @@ BSD 3-Clause licence in [LICENSE](LICENSE), **Copyright (c) 2026 Padmaja Pabbath
 
 ## Tooling disclosure
 
-The repository documentation, the CSV transcriptions, the provenance manifests and
-the analysis and plotting scripts were prepared with the assistance of Claude Code
-(Anthropic), working from the reports and the platform archive, and were reviewed
-by the repository owner. The laboratory work, the measurements, the reports and the
-analytical proposal are the work of the people credited above; no part of that
-work was performed by an AI tool.
+**Human work.** The laboratory optimisation work, the measurements and results, the
+writing of the project reports and the analytical proposal are the work of the people
+credited above: Padmaja Pabbathi; her Group 6 teammates Hardik Sai and Luke Nasby on
+the shared experimental project; and Tobias Mages and Wenqing Yan for the platform.
+
+**The reports' own statements are preserved.** The analytical report states that AI was
+used only for language improvement and structuring support, and that its technical
+reasoning, project data and conclusions are based on the group's experimental reports
+and communication theory. The two experimental reports contain no AI-use statement.
+Nothing in this repository alters those statements.
+
+**Repository preparation.** Separately from the work above, the material created for
+this repository (README, NOTICE, the documentation pages, the CSV transcriptions, the
+provenance manifests, and the analysis and plotting scripts) was prepared with the
+assistance of Claude Code (Anthropic), working from the reports and the platform
+archive, and was reviewed by the repository owner. Claude Code took no part in the
+laboratory work, the measurements or the authorship of the reports.

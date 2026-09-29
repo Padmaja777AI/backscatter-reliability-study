@@ -29,7 +29,8 @@ printed, and the notes below say how they should be read.
    100 % BER is an artificial marker, and any average that includes it (the reports'
    Table 2 BER column) mixes measurements with a sentinel and should not be read as a
    bit-error ratio. This repository reports such averages only under the label
-   "sentinel-inclusive" and uses the four common positions for BER comparisons.
+   "sentinel-inclusive" and uses the four positions with reception in every compared
+   configuration (P1, P2, P4, P5) for BER comparisons.
 7. **Environment.** The laboratory had strong, variable interference (Optimisation 2,
    page 1); it was not characterised, and run dates are not recorded.
 
@@ -80,8 +81,8 @@ printed, and the notes below say how they should be read.
    Optimisation 2 report still carries the axis label "Data rate bit/s" while its Table 1
    says byte/s.
 8. **Packet length.** "Increased by 50 percent (from 11 bytes to 16 bytes)" is a 45 %
-   increase, and 11 bytes matches no packet-size quantity in the platform firmware
-   (payload 14 bytes = 2 + 12 data, length field 15, frame 24). The D/R definition fixes
+   increase, and 11 bytes matches no packet-size quantity in the platform's starter code
+   (default payload 14 bytes = 2 + 12 data, length field 15, frame 24). The D/R definition fixes
    the payload at 12 bytes; the report does not say which length entered the formula for
    the 250 kBaud rows. Under the expected-÷-actual reading of PRR, the 250 kBaud P1 pair
    (27.87 bytes/s, 46.5 %) is consistent with a 16-byte payload having been used and the

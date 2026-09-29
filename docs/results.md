@@ -107,8 +107,8 @@ throughput outcome, so the D/R average does reflect coverage.
 
 ### 2.2 Unweighted means over the four common positions
 
-These are the positions where **every** configuration received packets, so no failure
-marker enters the average. Unweighted arithmetic means across the four positions:
+These are the four positions with reception in **every compared configuration**, so no
+failure marker enters the average. Unweighted arithmetic means across the four positions:
 
 | Config | Trials / position | Mean BER % (P1,P2,P4,P5) | BER range % | Mean D/R bytes/s | Mean duration s |
 |---|---|---|---|---|---|
@@ -197,7 +197,7 @@ the Optimisation 1 report.*
 ![Unweighted means over the four common positions](figures/generated/opt1_common_position_means.png)
 
 *Figure 3. Optimisation 1: unweighted means of BER, effective data rate and run duration
-over the four positions where every configuration received packets (P1, P2, P4, P5),
+over the four positions with reception in every compared configuration (P1, P2, P4, P5),
 against baud rate. The grey point is the 100 kBaud baseline. Newly generated from
 Table 1 of the Optimisation 1 report.*
 
@@ -216,7 +216,8 @@ printed tables; **[proposal]** = analytical reasoning, not measured.
 1. **[measured]** Lowering the baud rate from 100 kBaud to 60–80 kBaud reduced BER at every
    position where packets were received: P1 10.66 → 4.30 (80k) / 3.57 (60k) %,
    P2 13.03 → 10.00 / 8.64 %, P4 18.51 → 8.16 / 10.97 %, P5 15.33 → 6.95 / 8.25 %.
-2. **[computed]** Over the four common positions, 80 kBaud has the lowest unweighted mean
+2. **[computed]** Over the four positions with reception in every compared configuration
+   (P1, P2, P4, P5), 80 kBaud has the lowest unweighted mean
    BER (7.35 %), the highest mean data rate (33.73 bytes/s) and the shortest mean run
    (71.41 s), with 60 kBaud close behind (7.86 %, 32.46 bytes/s, 74.85 s). The two are
    within single-trial variation of each other.
