@@ -33,8 +33,8 @@ submitted version.
 
 * The archive is a snapshot of the course repository's `main` branch: its comment field
   carries the upstream commit id `8e1cc2b776cb677452c4f3d800d088d6a204a8af`, every entry
-  carries the raw ZIP timestamp `2026-03-23 12:37` (the archive's own date/time field,
-  which records no time zone), and the README changelog ends at 19.03.2026.
+  carries the archive date `2026-03-23` (the archive's own date field; no time zone is
+  recorded), and the README changelog ends at 19.03.2026.
 * All 66 files are listed in `data/provenance/source-archive-listing.txt`. 65 are
   vendored byte-for-byte (CRLF line endings preserved; see `.gitattributes`).
 * **Deliberately omitted:** `hardware/fp-info-cache`, a KiCad footprint-info cache that
